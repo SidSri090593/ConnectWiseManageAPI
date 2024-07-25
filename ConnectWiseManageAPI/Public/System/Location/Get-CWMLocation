@@ -16,5 +16,5 @@ function Get-CWMLocation {
     )
 
     $endpoint = "/system/locations"
-    Invoke-CWMGetMaster -Arguments $PsBoundParameters -Endpoint $Endpoint
+    Invoke-CWMGetMaster -Arguments $PsBoundParameters -Endpoint $endpoint
 }
