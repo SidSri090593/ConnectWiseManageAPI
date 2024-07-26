@@ -1,4 +1,3 @@
-
 function Get-CWMLocation {
     [CmdletBinding()]
     param(
@@ -16,5 +15,5 @@ function Get-CWMLocation {
     )
 
     $endpoint = "/system/locations"
-    Invoke-CWMGetMaster -Arguments $PsBoundParameters -Endpoint $endpoint
+    Invoke-CWMGetMaster -Arguments $PSBoundParameters -Endpoint $endpoint
 }
