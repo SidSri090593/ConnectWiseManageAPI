@@ -9,35 +9,30 @@ function New-CWMCompanySite {
         [string]$addressLine1,
         [string]$addressLine2,
         [string]$city,
-        [string]$state,
+        [hashtable]$stateReference,
         [string]$zip,
-        [string]$country,
-        [string]$phone,
-        [string]$fax,
-        [string]$email,
-        [string]$website,
-        [string]$territory,
-        [string]$status,
-        [string]$type
+        [hashtable]$country,
+        [string]$addressFormat,
+        [string]$phoneNumber,
+        [string]$phoneNumberExt,
+        [string]$faxNumber,
+        [hashtable]$taxCode,
+        [hashtable]$entityType,
+        [double]$expenseReimbursement,
+        [boolean]$primaryAddressFlag,
+        [boolean]$defaultShippingFlag,
+        [boolean]$defaultBillingFlag,
+        [boolean]$defaultMailingFlag,
+        [boolean]$inactiveFlag,
+        [boolean]$billSeparateFlag,
+        [Guid]$mobileGuid,
+        [hashtable]$calendar,
+        [hashtable]$timeZone,
+        [hashtable]$company,
+        [hashtable]$_info,
+        [hashtable[]]$customFields
     )
     
     $Endpoint = "/company/companies/$($parentId)/sites"
-    $Body = @{
-        name = $name
-        addressLine1 = $addressLine1
-        addressLine2 = $addressLine2
-        city = $city
-        state = $state
-        zip = $zip
-        country = $country
-        phone = $phone
-        fax = $fax
-        email = $email
-        website = $website
-        territory = $territory
-        status = $status
-        type = $type
-        defaultFlag = $defaultFlag
-    }
     Invoke-CWMNewMaster -Arguments $PsBoundParameters -Endpoint $Endpoint
 }
