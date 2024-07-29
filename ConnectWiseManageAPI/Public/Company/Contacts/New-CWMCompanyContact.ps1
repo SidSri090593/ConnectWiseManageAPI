@@ -58,6 +58,8 @@
         [string]$twitterUrl,
         [string]$linkedInUrl,
         [bool]$defaultBillingFlag,
+        [string]$defaultPhoneType,
+        [string]$defaultPhoneNbr,
         [bool]$defaultFlag,
         [hashtable[]]$communicationItems,
         [hashtable]$_info,
