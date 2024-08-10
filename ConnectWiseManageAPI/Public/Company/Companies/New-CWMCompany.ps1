@@ -95,7 +95,7 @@ function New-CWMCompany {
         [hashtable]$site,
         [array]$integratorTags,
         [hashtable]$_info,
-        [hashtable]$customFields
+        [hashtable[]]$customFields
     )
 
     $Endpoint = '/company/companies'
