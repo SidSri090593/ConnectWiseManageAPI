@@ -6,7 +6,6 @@ function Update-CWMCompanySite {
         [Alias('companyId')]
         [int]$id,
         [Parameter(Mandatory = $true)]
-        [Alias('SiteId')]
         [int]$Siteid,
         [Parameter(Mandatory = $true)]
         [validateset('add', 'replace', 'remove')]
